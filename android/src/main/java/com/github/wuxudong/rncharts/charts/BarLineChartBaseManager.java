@@ -55,6 +55,7 @@ public abstract class BarLineChartBaseManager<T extends BarLineChartBase, U exte
     @Override
     public void setYAxis(Chart chart, ReadableMap propMap) {
         BarLineChartBase barLineChart = (BarLineChartBase) chart;
+        barLineChart.setNoDataText("");
 
         if (BridgeUtils.validate(propMap, ReadableType.Map, "left")) {
             YAxis leftYAxis = barLineChart.getAxisLeft();
